@@ -1,0 +1,127 @@
+function LoadRelativeConfig(path)
+  exec "source " . stdpath('config') . a:path
+endfunction
+
+call LoadRelativeConfig('/boot/general-options.vim')
+
+call plug#begin(stdpath('config') . '/plugged')
+  " Dashboard for GitHub {{{
+  Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+  " }}}
+  " File browser {{{
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  " }}}
+  " Better search with fzf {{{
+  Plug 'junegunn/fzf.vim'
+  Plug '/usr/local/opt/fzf'
+  " }}}
+  " Git related {{{
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'rhysd/committia.vim'
+  " }}}
+  " Fancy UI {{{
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  " Themes
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'mhartington/oceanic-next'
+  Plug 'morhetz/gruvbox'
+  Plug 'artanikin/vim-synthwave84'
+  Plug 'joshdick/onedark.vim'
+  " }}}
+  " Icons {{{
+  Plug 'ryanoasis/vim-devicons'
+  " }}}
+  " Language Server {{{
+  "Plug 'dense-analysis/ale'
+  " }}}
+  " Snippets {{{
+  Plug 'SirVer/ultisnips'
+  " }}}
+  " Markdown zenify {{{
+  Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+  Plug 'junegunn/limelight.vim'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
+  " }}}
+  " PHP {{{
+  "Plug 'joonty/vim-phpunitqf'
+  Plug 'vim-vdebug/vdebug'
+  " }}}
+  " Wiki {{{
+  Plug 'nblock/vim-dokuwiki'
+  " }}}
+  " Latex {{{
+  Plug 'lervag/vimtex'
+  " }}}
+  " Undo {{{
+  Plug 'simnalamburt/vim-mundo'
+  " }}}
+  " Buffers {{{
+  Plug 'jeetsukumaran/vim-buffergator'
+  " }}}
+  " Haskell {{{
+  Plug 'alx741/vim-hindent'
+  Plug 'alx741/vim-stylishask'
+  Plug 'parsonsmatt/intero-neovim'
+  Plug 'dan-t/vim-hsimport'
+  " }}}
+  " Extra Dev Stuff {{{
+  Plug 'neomake/neomake'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'majutsushi/tagbar'
+  "Plug 'liuchengxu/vista.vim'
+  " }}}
+  " Terraform {{{
+  Plug 'hashivim/vim-terraform'
+  " }}}
+  " }}}
+
+call plug#end()
+
+" let g:ale_linters = {}
+
+call LoadRelativeConfig('/boot/floating.vim')
+call LoadRelativeConfig('/boot/github.vim')
+call LoadRelativeConfig('/boot/fzf.vim')
+call LoadRelativeConfig('/boot/nerdtree.vim')
+call LoadRelativeConfig('/boot/committia.vim')
+call LoadRelativeConfig('/boot/git.vim')
+call LoadRelativeConfig('/boot/goyo.vim')
+call LoadRelativeConfig('/boot/abbr.vim')
+call LoadRelativeConfig('/boot/encrypted.vim')
+" call LoadRelativeConfig('/boot/ale.vim')
+call LoadRelativeConfig('/boot/coc.vim')
+call LoadRelativeConfig('/boot/mundo.vim')
+call LoadRelativeConfig('/boot/markdown.vim')
+call LoadRelativeConfig('/boot/deoplete.vim')
+call LoadRelativeConfig('/boot/terminal.vim')
+
+set path+=**
+
+set background=dark
+"colorscheme gruvbox
+"colorscheme synthwave84
+colorscheme onedark
+
+" exit terminal with ESC
+tnoremap <Esc> <C-\><C-n>
+
+" REFACTOR AFTER THIS
+
+" TagBar
+nnoremap <silent> <leader>pt :TagbarToggle<CR>
+
+"set foldmethod=indent   
+set foldmethod=syntax
+set foldnestmax=10
+set foldenable
+set foldlevel=2
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+let &colorcolumn="120,".join(range(120,999),",")
+hi ColorColumn guibg=#2a2a2a ctermbg=0

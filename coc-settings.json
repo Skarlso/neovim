@@ -1,0 +1,17 @@
+{
+  "coc.preferences.noselect": false,
+  "suggest.autoTrigger":"always",
+  "languageserver": {
+    "golang": {
+      "command": "/Users/skarlso/go/bin/gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
+  "go.goplsEnv": {
+    "GOFLAGS": "-tags=integration"
+  }
+}
