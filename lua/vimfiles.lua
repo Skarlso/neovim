@@ -1,7 +1,4 @@
-function loadVimFile(path)
-  local fullPath = vim.fn.stdpath('config') .. '/vimfiles/' .. path .. '.vim'
-  vim.cmd('source ' .. fullPath)
-end
+local loadVimFile = require("tools").loadVimFile
 
 local modules = {
   'encrypted',
