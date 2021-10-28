@@ -31,6 +31,7 @@ local modules = {
   'git',
   'map',
   'vimtest',
+  'config.coc',
   'vimfiles'
 }
 
