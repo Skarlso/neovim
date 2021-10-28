@@ -73,10 +73,10 @@ vim.opt.sessionoptions:remove('options')
 --vim.opt.splitbelow = true
 --vim.opt.splitright = true
 
-vim.opt.foldmethod = 'syntax'
-vim.opt.foldnestmax = 10
-vim.opt.foldenable = true
-vim.opt.foldlevel = 2
+--vim.opt.foldmethod = 'syntax'
+--vim.opt.foldnestmax = 10
+--vim.opt.foldenable = true
+--vim.opt.foldlevel = 2
 
 -- let &colorcolumn="80,".join(range(120,999),",")
 vim.opt.path:append('**')
