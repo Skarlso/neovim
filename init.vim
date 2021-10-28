@@ -64,7 +64,7 @@ call plug#begin(stdpath('config') . '/plugged')
   " Extra Dev Stuff {{{
   Plug 'neomake/neomake'
   Plug 'Shougo/deoplete.nvim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " }}}
   " Terraform {{{
@@ -79,6 +79,9 @@ call plug#begin(stdpath('config') . '/plugged')
   " vim-test {{{
   Plug 'vim-test/vim-test'
   Plug 'sebdah/vim-delve'
+  " }}}
+  " github {{{
+  Plug 'pwntester/octo.nvim'
   " }}}
   
   " Syntax {{{
@@ -100,7 +103,7 @@ call LoadRelativeConfig('/boot/abbr.vim')
 call LoadRelativeConfig('/boot/encrypted.vim')
 " call LoadRelativeConfig('/boot/ale.vim')
 " call LoadRelativeConfig('/boot/deoplete.vim')
-call LoadRelativeConfig('/boot/coc.vim')
+" call LoadRelativeConfig('/boot/coc.vim')
 call LoadRelativeConfig('/boot/mundo.vim')
 call LoadRelativeConfig('/boot/markdown.vim')
 call LoadRelativeConfig('/boot/terminal.vim')
@@ -166,5 +169,6 @@ let g:rainbow_active = 1
 
 lua << EOF
 require'lspconfig'.gopls.setup{}
+require'octo'.setup()
 EOF
 
