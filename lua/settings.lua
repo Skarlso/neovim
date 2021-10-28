@@ -62,6 +62,8 @@ vim.opt.clipboard = 'unnamed'
 -- meh
 vim.opt.clipboard:append('unnamedplus')
 
+vim.opt.mouse = "a"
+
 vim.opt.colorcolumn = "120"
 vim.opt.path:append('**')
 
