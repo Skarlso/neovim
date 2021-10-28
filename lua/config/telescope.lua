@@ -3,8 +3,6 @@ if not present then
    return
 end
 
-local map = require('tools').map
-
 require('telescope').setup({
   extensions = {
     media_files = {
@@ -32,14 +30,3 @@ local extensions = {
 for idx = 1, #extensions do
   telescope.load_extension(extensions[idx])
 end
-
--- map
-map('n', '<C-L>', ':Telescope live_grep<CR>', {})
-map('n', '<leader>gt', ':Telescope git_status<CR>', {})
-map('n', '<leader>cm', ':Telescope git_commits<CR>', {})
-map('n', '<leader>fh', ':Telescope help_tags<CR>', {})
-map('n', '<leader>fo', ':Telescope oldfiles<CR>', {})
-map('n', '<C-p>', ':Telescope find_files<CR>', {})
-map('n', '<C-b>', ':Telescope buffers<CR>', {})
-map('n', '<leader>r', ':Telescope lsp_references<CR>', {})
-map('n', '<leader>i', ':Telescope lsp_implementations<CR>', {})

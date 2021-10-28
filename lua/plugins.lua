@@ -148,12 +148,7 @@ return packer.startup(function()
   use 'hashivim/vim-terraform'
   -- }}}
   -- }}}
-  use {
-    'majutsushi/tagbar',
-    config = function ()
-      require('config.tagbar')
-    end
-  }
+  use 'majutsushi/tagbar'
   use 'ludovicchabant/vim-gutentags'
   use 'chuling/vim-equinusocio-material'
   use 'sheerun/vim-polyglot'

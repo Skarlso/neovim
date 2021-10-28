@@ -45,10 +45,3 @@ autocmd FileType go nmap <silent> goi :call CocAction('runCommand', 'editor.acti
 autocmd FileType go vmap jtc :'<'> !quicktype -l go --just-types --top-level Converted<CR>
 autocmd FileType go nmap jtc :read !pbpaste \| quicktype -l go --just-types --top-level Converted<CR>
 ]])
-
--- map
-map('n', '<leader>db', ':DlvToggleBreakpoint<CR>', {})
-map('n', '<leader>dt', ':DlvToggleTracepoint<CR>', {})
-map('n', '<leader>dr', ':DlvDebug<CR>', {})
-map('n', '<leader>drt', ':DlvTest<CR>', {})
-

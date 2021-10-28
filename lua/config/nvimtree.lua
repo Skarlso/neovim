@@ -70,6 +70,3 @@ tree_c.setup {
   follow = true,
   lsp_diagnostics = true,
 }
-
--- map
-map('n', '<C-n>', ':NvimTreeToggle<CR>', {})

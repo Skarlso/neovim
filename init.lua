@@ -29,6 +29,7 @@ local modules = {
   'style',
   'terminal',
   'git',
+  'map',
   'vimtest',
   'vimfiles'
 }
