@@ -98,10 +98,7 @@ return packer.startup(function()
   -- Themes
   use 'arcticicestudio/nord-vim'
   use 'mhartington/oceanic-next'
-  use 'morhetz/gruvbox'
-  use 'artanikin/vim-synthwave84'
-  use 'joshdick/onedark.vim'
-  use 'rakr/vim-one'
+  use 'navarasu/onedark.nvim'
   -- }}}
 
   -- Snippets {{{
