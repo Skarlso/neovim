@@ -156,7 +156,6 @@ return packer.startup(function()
   }
   use 'ludovicchabant/vim-gutentags'
   use 'chuling/vim-equinusocio-material'
-  use 'prettier/vim-prettier'
   use 'sheerun/vim-polyglot'
   use 'luochen1990/rainbow'
   -- vim-test {{{

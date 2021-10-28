@@ -72,4 +72,4 @@ tree_c.setup {
 }
 
 -- map
-map('n', '<leader>p', ':NvimTreeToggle<CR>', {noremap = true})
+map('n', '<C-n>', ':NvimTreeToggle<CR>', {})

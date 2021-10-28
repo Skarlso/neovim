@@ -82,7 +82,6 @@ vim.opt.sessionoptions:remove('options')
 vim.opt.path:append('**')
 
 -- map
-map('n', '<C-n>', ':NERDTreeToggle<CR>', {})
 map('n', '<F7>', ':tabnew<CR>', {})
 map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>', {})
 map('n', '<leader>a', ':Ag <C-R><C-W><CR>' ,{silent = true})
@@ -91,7 +90,7 @@ map('i', '<expr><tab>', 'pumvisible() ? "\\<C-n>" : "\\<TAB>"', {})
 -- copy paste helper
 map('n', '<leader>d', '"_d')
 map('x', '<leader>d', '"_d')
-map('x', '<leader>p', '"_dP')
+--map('x', '<leader>p', '"_dP')
 
 -- vim-go settings
 vim.g.go_metalinter_command = "golangci-lint"

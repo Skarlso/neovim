@@ -36,3 +36,7 @@ git clone https://github.com/wbthomason/packer.nvim \
 ```
 npm install -g quicktype
 ```
+
+## Troubleshooting
+
+Overwrite `~/.config/coc/extensions/coc-lua-data/sumneko-lua-ls` with the latest version downloaded from Github on OSX.
