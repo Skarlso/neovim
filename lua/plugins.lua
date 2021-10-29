@@ -101,15 +101,6 @@ return packer.startup(function()
   use 'navarasu/onedark.nvim'
   -- }}}
 
-  -- Snippets {{{
-  use {
-    'SirVer/ultisnips',
-    config = function ()
-      require("config.ultisnips")
-    end
-  }
-  -- }}}
-
   -- Markdown zenify {{{
   use 'junegunn/limelight.vim'
   use 'plasticboy/vim-markdown'
@@ -159,6 +150,13 @@ return packer.startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
+  }
+  -- }}}
+
+  -- Tabs {{{
+  use {
+    "nanozuki/tabby.nvim",
+    config = function() require("tabby").setup() end,
   }
   -- }}}
 end)

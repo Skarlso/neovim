@@ -82,7 +82,9 @@ vim.opt.sessionoptions:remove('options')
 vim.opt.path:append('**')
 
 -- map
-map('n', '<F7>', ':tabnew<CR>', {})
+map('n', 'ç', ':tabnew<CR>', {})
+map('n', '≤', ':tabprevious<CR>', {})
+map('n', '≥', ':tabnext<CR>', {})
 map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>', {})
 map('n', '<leader>a', ':Ag <C-R><C-W><CR>' ,{silent = true})
 map('i', '<expr><tab>', 'pumvisible() ? "\\<C-n>" : "\\<TAB>"', {})
