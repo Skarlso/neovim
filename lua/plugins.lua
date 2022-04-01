@@ -13,11 +13,6 @@ return packer.startup(function()
   use 'wbthomason/packer.nvim'
 
   -- GitHub {{{
-  use {
-    'junegunn/vim-github-dashboard',
-    opt = false,
-    cmd = {'GHDashboard', 'GHActivity'}
-  }
   use {'pwntester/octo.nvim', config=function()
     require("octo").setup()
   end}
@@ -99,6 +94,8 @@ return packer.startup(function()
   use 'arcticicestudio/nord-vim'
   use 'mhartington/oceanic-next'
   use 'navarasu/onedark.nvim'
+  use 'dracula/vim'
+  use "rebelot/kanagawa.nvim"
   -- }}}
 
   -- Markdown zenify {{{
@@ -115,7 +112,6 @@ return packer.startup(function()
   }
   -- }}}
   -- Extra Dev Stuff {{{
-  use 'neomake/neomake'
   use 'Shougo/deoplete.nvim'
   use {
     'neoclide/coc.nvim',
@@ -132,10 +128,6 @@ return packer.startup(function()
     end
   }
   -- }}}
-  -- Terraform {{{
-  use 'hashivim/vim-terraform'
-  -- }}}
-  -- }}}
   use 'majutsushi/tagbar'
   use 'ludovicchabant/vim-gutentags'
   use 'chuling/vim-equinusocio-material'
@@ -145,7 +137,7 @@ return packer.startup(function()
   use 'vim-test/vim-test'
   use 'sebdah/vim-delve'
   -- }}}
-  
+
   -- Syntax {{{
   use {
     'nvim-treesitter/nvim-treesitter',

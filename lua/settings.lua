@@ -75,7 +75,7 @@ vim.opt.sessionoptions:remove('options')
 
 --vim.opt.foldmethod = 'syntax'
 --vim.opt.foldnestmax = 10
---vim.opt.foldenable = true
+vim.opt.foldenable = false
 --vim.opt.foldlevel = 2
 
 -- let &colorcolumn="80,".join(range(120,999),",")
@@ -88,6 +88,7 @@ map('n', '≥', ':tabnext<CR>', {})
 map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>', {})
 map('n', '<leader>a', ':Ag <C-R><C-W><CR>' ,{silent = true})
 map('i', '<expr><tab>', 'pumvisible() ? "\\<C-n>" : "\\<TAB>"', {})
+map('n', '<leader>n', ':NvimTreeFindFile <CR>', {})
 
 -- copy paste helper
 map('n', '<leader>d', '"_d')
@@ -96,8 +97,7 @@ map('x', '<leader>d', '"_d')
 
 -- vim-go settings
 vim.g.go_metalinter_command = "golangci-lint"
-vim.g.go_metalinter_autosave_enabled = { 'govet' }
-vim.g.go_metalinter_autosave = 1
+vim.g.go_metalinter_autosave = 0
 vim.g.go_highlight_functions = 1
 vim.g.go_highlight_methods = 1
 vim.g.go_highlight_structs = 1
