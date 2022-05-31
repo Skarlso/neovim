@@ -146,9 +146,9 @@ return packer.startup(function()
   -- }}}
 
   -- Tabs {{{
-  use {
-    "nanozuki/tabby.nvim",
-    config = function() require("tabby").setup() end,
-  }
+--  use {
+--    "nanozuki/tabby.nvim",
+--    config = function() require("tabby").setup() end,
+--  }
   -- }}}
 end)
