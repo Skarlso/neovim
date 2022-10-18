@@ -30,8 +30,12 @@ local modules = {
   'terminal',
   'git',
   'map',
+  'markdown',
   'vimtest',
-  'config.coc',
+  'config.go',
+  'config.lsp',
+  'config.telescope',
+  'config.treesitter',
   'vimfiles'
 }
 
@@ -41,13 +45,13 @@ end
 
 -- REFACTOR AFTER THIS
 vim.g.python3_host_prog = '/usr/bin/python3'
-vim.g.gutentags_ctags_tagfile = '.tags'
-vim.g.gutentags_file_list_command = {
-  markers = {
-    ['.git'] = 'git ls-files'
-  }
-}
-vim.g.gutentags_ctags_executable = '/usr/local/bin/ctags'
+-- vim.g.gutentags_ctags_tagfile = '.tags'
+-- vim.g.gutentags_file_list_command = {
+--  markers = {
+--    ['.git'] = 'git ls-files'
+--  }
+--}
+--vim.g.gutentags_ctags_executable = '/usr/local/bin/ctags'
 vim.g.rainbow_active = true
 
 -- Set viminfo and restore shadafile

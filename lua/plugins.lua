@@ -30,6 +30,7 @@ return packer.startup(function()
   -- }}}
 
   -- Better search with telescope {{{
+  use {'nvim-telescope/telescope-ui-select.nvim' }
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -39,7 +40,6 @@ return packer.startup(function()
       {"nvim-telescope/telescope-github.nvim"},
       {"nvim-telescope/telescope-symbols.nvim"},
       {"crispgm/telescope-heading.nvim"},
-      {"fannheyward/telescope-coc.nvim"},
     },
     config = function()
       require("config.telescope")
@@ -54,7 +54,19 @@ return packer.startup(function()
     end
   }
   -- }}}
-  
+  -- Cmp {{{
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+    },
+  }
+
+  use({"petertriho/cmp-git", requires = "nvim-lua/plenary.nvim"})
+  -- }}}
   -- Icons {{{
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
@@ -91,7 +103,6 @@ return packer.startup(function()
   use 'vim-airline/vim-airline-themes'
 
   -- Themes
-  use 'arcticicestudio/nord-vim'
   use 'mhartington/oceanic-next'
   use 'navarasu/onedark.nvim'
   use 'dracula/vim'
@@ -100,7 +111,7 @@ return packer.startup(function()
 
   -- Markdown zenify {{{
   use 'junegunn/limelight.vim'
-  use 'plasticboy/vim-markdown'
+  --use 'plasticboy/vim-markdown'
   use 'vim-pandoc/vim-pandoc-syntax'
   -- }}}
   -- Undo {{{
@@ -112,24 +123,26 @@ return packer.startup(function()
   }
   -- }}}
   -- Extra Dev Stuff {{{
-  use 'Shougo/deoplete.nvim'
-  use {
-    'neoclide/coc.nvim',
-    branch = 'release',
-    config = function()
-      require('config.coc')
-    end
-  }
-  use {
-    'fatih/vim-go',
-    run = ':GoUpdateBinaries',
-    config = function()
-      require("config.go")
-    end
-  }
+  --use 'Shougo/deoplete.nvim'
+  --use {
+  --  'neoclide/coc.nvim',
+  --  branch = 'release',
+  --  config = function()
+  --    require('config.coc')
+  --  end
+  --}
+  --use {
+  --  'fatih/vim-go',
+  --  run = ':GoUpdateBinaries',
+  --  config = function()
+  --    require("config.go")
+  --  end
+  --}
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommanded if need floating window support
   -- }}}
   use 'majutsushi/tagbar'
-  use 'ludovicchabant/vim-gutentags'
+--  use 'ludovicchabant/vim-gutentags'
   use 'chuling/vim-equinusocio-material'
   use 'sheerun/vim-polyglot'
   use 'luochen1990/rainbow'
@@ -139,9 +152,17 @@ return packer.startup(function()
   -- }}}
 
   -- Syntax {{{
+  --use {
+  --  'nvim-treesitter/nvim-treesitter',
+  --  run = ':TSUpdate'
+  --}
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = {'go', 'markdown', 'lua'}
+      }
+    end
   }
   -- }}}
 
@@ -150,5 +171,26 @@ return packer.startup(function()
 --    "nanozuki/tabby.nvim",
 --    config = function() require("tabby").setup() end,
 --  }
+  -- }}}
+  
+  -- Org Mode {{{
+  --  use {
+  --      "nvim-neorg/neorg",
+  --      run = ":Neorg sync-parsers", -- This is the important bit!
+  --      after = "nvim-treesitter", -- You may want to specify Telescope here as well
+  --      config = function()
+  --          require('neorg').setup {
+  --              load = {
+  --                  ["core.defaults"] = {},
+  --                  ["core.norg.completion"] = {
+  --                      config = {
+  --                          engine = "nvim-cmp"
+  --                      }
+  --                  }
+  --              }
+  --          }
+  --      end,
+  --      requires = "nvim-lua/plenary.nvim"
+  --  }
   -- }}}
 end)
