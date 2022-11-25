@@ -107,6 +107,7 @@ return packer.startup(function()
   use 'navarasu/onedark.nvim'
   use 'dracula/vim'
   use "rebelot/kanagawa.nvim"
+  use 'folke/tokyonight.nvim'
   -- }}}
 
   -- Markdown zenify {{{
