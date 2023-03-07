@@ -1,8 +1,8 @@
 vim.g.lightline = {
-  colorscheme = 'OceanicNext'
+  colorscheme = 'onedark'
 }
 
 -- vim.opt.background = 'dark'
 
-vim.cmd('colorscheme OceanicNext')
+vim.cmd('colorscheme onedark')
 -- vim.cmd('hi ColorColumn guibg=#2a2a2a ctermbg=0')
