@@ -2,7 +2,7 @@ local loadVimFile = require("tools").loadVimFile
 
 local modules = {
   'encrypted',
-  'coc'
+  --'coc'
 }
 
 for idx = 1, #modules do

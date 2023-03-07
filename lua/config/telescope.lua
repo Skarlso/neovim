@@ -23,8 +23,9 @@ local extensions = {
   "media_files",
   "gh",
   "heading",
-  "coc",
+  --"coc",
   "octo",
+  "ui-select",
 }
 
 for idx = 1, #extensions do

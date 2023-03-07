@@ -7,7 +7,7 @@ vim.opt.autoindent = true
 vim.opt.backspace = {'indent','eol','start'}
 vim.opt.complete:remove('i')
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 0
 vim.opt.expandtab = true
@@ -96,24 +96,24 @@ map('x', '<leader>d', '"_d')
 --map('x', '<leader>p', '"_dP')
 
 -- vim-go settings
-vim.g.go_metalinter_command = "golangci-lint"
-vim.g.go_metalinter_autosave = 0
-vim.g.go_highlight_functions = 1
-vim.g.go_highlight_methods = 1
-vim.g.go_highlight_structs = 1
-vim.g.go_highlight_operators = 1
-vim.g.go_highlight_build_constraints = 1
-vim.g.go_highlight_extra_types = 1
-vim.g.go_highlight_fields = 1
-vim.g.go_highlight_format_strings = 1
-vim.g.go_highlight_function_calls = 1
-vim.g.go_highlight_function_parameters = 1
-vim.g.go_highlight_functions = 1
-vim.g.go_highlight_generate_tags = 1
-vim.g.go_highlight_string_spellcheck = 1
-vim.g.go_highlight_types = 1
-vim.g.go_highlight_variable_assignments = 1
-vim.g.go_highlight_variable_declarations = 1
-vim.g.go_rename_command = 'gopls'
-vim.g.go_fmt_command = "goimports"
-vim.g.go_build_tags = 'integration'
+--vim.g.go_metalinter_command = "golangci-lint"
+--vim.g.go_metalinter_autosave = 0
+--vim.g.go_highlight_functions = 1
+--vim.g.go_highlight_methods = 1
+--vim.g.go_highlight_structs = 1
+--vim.g.go_highlight_operators = 1
+--vim.g.go_highlight_build_constraints = 1
+--vim.g.go_highlight_extra_types = 1
+--vim.g.go_highlight_fields = 1
+--vim.g.go_highlight_format_strings = 1
+--vim.g.go_highlight_function_calls = 1
+--vim.g.go_highlight_function_parameters = 1
+--vim.g.go_highlight_functions = 1
+--vim.g.go_highlight_generate_tags = 1
+--vim.g.go_highlight_string_spellcheck = 1
+--vim.g.go_highlight_types = 1
+--vim.g.go_highlight_variable_assignments = 1
+--vim.g.go_highlight_variable_declarations = 1
+--vim.g.go_rename_command = 'gopls'
+--vim.g.go_fmt_command = "goimports"
+--vim.g.go_build_tags = 'integration'
